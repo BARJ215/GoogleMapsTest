@@ -6,10 +6,10 @@
         id        = "mob.app.dev.lifecycle"
         version   = "1.0.0">
 
-    <name>Template</name>
+    <name>Google Maps Test</name>
 
     <description>
-        Template Phonegap
+        Map Test
     </description>
 
     <author href="worcester.ac.uk" email="BARJ2_15@uni.worc.ac.uk">

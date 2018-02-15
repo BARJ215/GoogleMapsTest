@@ -20,7 +20,8 @@ $(document).on('pageinit', function() {
 function getPosition() {
     console.log("getPosition");
 	//instruct location service to get position with appropriate callbacks
-	navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+    var info = navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+    return info;
 }
 //called when the position is successfully determined
 function successPosition(position) {

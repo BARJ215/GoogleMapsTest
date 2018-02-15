@@ -14,7 +14,7 @@ $(document).on('pageinit', function() {
     //navigator.geolocation.watchPosition(successPosition,failPosition,locationOptions);
 
     //var pos  = getPosition();
-}
+});
 
 //Call this function when you want to get the current position
 function getPosition() {

@@ -18,11 +18,13 @@ $(document).on('pageinit', function() {
 
 //Call this function when you want to get the current position
 function getPosition() {
+    console.log("getPosition");
 	//instruct location service to get position with appropriate callbacks
 	navigator.geolocation.getCurrentPosition(successPosition, failPosition);
 }
 //called when the position is successfully determined
 function successPosition(position) {
+    console.log("successPosition");
 	
 	//You can find out more details about what the position obejct contains here:
 	// http://www.w3schools.com/html/html5_geolocation.asp
@@ -40,15 +42,8 @@ function successPosition(position) {
     // var speed = position.coords.speed;
 
     var positionInfo = {
-        unixTime: new Date(position.timestamp),
-        date: unixTime.toDateString(),
         lat: position.coords.latitude,
         long: position.coords.longitude,
-        acc: position.coords.accuracy,
-        alt: position.coords.altitude,
-        altAcc: position.coords.altitudeAccuracy,
-        head: position.coords.heading,
-        speed: position.coords.speed
     }
     
     console.log(longitude,latitude);
@@ -65,6 +60,7 @@ function failPosition(error) {
 function initMap(){
     detectBrowser();
     var pos  = getPosition();
+    console.log(pos.lat+" "+pos.long);
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: pos.lat, lng: pos.long},
         zoom: 8

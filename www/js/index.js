@@ -4,7 +4,7 @@ var currentCenter={lat: -34.397, lng: 150.644};
 $(document).on('pageinit', function() {
     //set up listener for button click
 	$(document).on('click', getPosition);
-	   
+
    // var locationOptions = {
         //maximumAge: 10000,
         //timeout: 6000,

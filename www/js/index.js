@@ -44,7 +44,7 @@ function successPosition(position) {
     var positionInfo = {
         lat: position.coords.latitude,
         long: position.coords.longitude,
-    }
+    };
     
     console.log(longitude,latitude);
     return positionInfo;

@@ -20,8 +20,8 @@ $(document).on('pageinit', function() {
 function getPosition() {
     console.log("getPosition");
 	//instruct location service to get position with appropriate callbacks
-    var info = navigator.geolocation.getCurrentPosition(successPosition, failPosition);
-    return info;
+    navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+
 }
 //called when the position is successfully determined
 function successPosition(position) {
@@ -47,8 +47,7 @@ function successPosition(position) {
         long: position.coords.longitude,
     };
     
-    console.log(longitude,latitude);
-    return positionInfo;
+    //console.log(longitude,latitude);
 
 }
 
@@ -60,10 +59,10 @@ function failPosition(error) {
 	
 function initMap(){
     detectBrowser();
-    var pos  = getPosition();
-    console.log(pos.lat+" "+pos.long);
+    getPosition();
+    console.log(positionInfo.lat+" "+positionInfo.long);
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: pos.lat, lng: pos.long},
+        center: {lat: positionInfo.lat, lng: positionInfo.long},
         zoom: 8
     });
 }

@@ -23,7 +23,7 @@ function getPosition() {
 	//$('#time').val("Getting data...");
 	
 	//instruct location service to get position with appropriate callbacks
-	navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+    navigator.geolocation.getCurrentPosition(successPosition, failPosition);
 }
 
 

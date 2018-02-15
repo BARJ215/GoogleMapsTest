@@ -1,7 +1,7 @@
 var map;
 var currentCenter={lat: -34.397, lng: 150.644};
 //when the jQuery Mobile page is initialised
-$(document).on('pageinit', function() {
+$(document).on('pageinit', function(){
     //set up listener for button click
 	$(document).on('click', getPosition);
 
@@ -14,7 +14,7 @@ $(document).on('pageinit', function() {
     //navigator.geolocation.watchPosition(successPosition,failPosition,locationOptions);
 
     //var pos  = getPosition();
-}
+});
 
 //Call this function when you want to get the current position
 function getPosition() {
